@@ -1,0 +1,49 @@
+
+////////////////////////////////////////////
+// Visual History (VHY) French Translation.
+//
+// Package: VHY extension for SketchUp
+// Translation author: Samuel Tallet
+////////////////////////////////////////////
+
+//
+// File: visual_history.rb
+//
+
+"Visual History"="Historique visuel";
+"Visually control your SketchUp history with thumbnails."="Contrôlez visuellement votre historique SketchUp avec des miniatures.";
+"Export your history to an animated GIF image (on Windows)."="Exportez votre historique vers une image GIF animée (sur Windows).";
+
+//
+// File: grouponents.rb
+//
+
+"First, select a group or a component."="D'abord, sélectionnez un groupe ou un composant.";
+"Rotation... Please wait."="Rotation... Veuillez patienter.";
+
+//
+// File: menu.rb
+//
+
+"Show Visual History"="Afficher l'historique visuel";
+"Center Selection Relatively to Origin"="Centrer la sélection par rapport à l'origine";
+"Clear Visual History"="Effacer l'historique visuel";
+"Rotate Selection by 360° in 32 Steps"="Faire pivoter la sélection de 360° en 32 étapes";
+"Export History as GIF..."="Exporter l'historique en tant que GIF...";
+
+//
+// File: viewer.rb
+//
+
+"Recycle Visual History"="Recycler l'historique visuel";
+"History is empty."="L'historique est vide.";
+"Visual History Viewer"="Visionneuse de l'historique visuel";
+"Select a Directory for GIF Output."="Sélectionner un répertoire pour le GIF sortant.";
+"Delay between each frame"="Délai entre chaque image";
+"GIF Customization"="Personnalisation du GIF";
+
+//
+// File: viewer.rhtml
+//
+
+"Go back to this state."="Revenir à cet état.";

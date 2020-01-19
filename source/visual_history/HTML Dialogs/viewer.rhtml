@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="<%= Sketchup.get_locale %>">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="x-copyright" content="© 2020 Samuel Tallet">
+	<meta name="x-license" content="GNU General Public License 3.0">
+
+	<title><%= TRANSLATE['Visual History Viewer'] %></title>
+
+	<%= scripts['viewer.js'] %>
+
+	<%= styles['viewer.css'] %>
+
+</head>
+
+<body>
+
+	<%
+	for state_index in 1..SESSION[:states_count] do
+
+		if state_index < 10
+
+			state_filename = File.join(Viewer.temp_dir, '0' + state_index.to_s + '.jpg')
+
+		else
+
+			state_filename = File.join(Viewer.temp_dir, state_index.to_s + '.jpg')
+			
+		end
+	%>
+
+		<img class="visual-history-thumbnail" width="170" height="128" data-state-index="<%= state_index %>" src="<%= state_filename %>" title="<%= TRANSLATE['Go back to this state.'] %>" />
+
+	<% end %>
+
+</body>
+
+</html>

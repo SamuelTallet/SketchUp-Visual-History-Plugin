@@ -1,0 +1,17 @@
+/**
+ * Visual History (VHY) Viewer.
+ *
+ * Package: VHY extension for SketchUp
+ *
+ * Copyright: © 2020 Samuel Tallet
+ *
+ * Licence: GNU General Public License 3.0
+ */
+
+.visual-history-thumbnail {
+
+	margin-left: 2px;
+	
+	cursor: pointer;
+
+}
