@@ -15,7 +15,7 @@ Installation
 ------------
 
 1. Be sure to have SketchUp 2017 or newer.
-2. Download latest Visual History plugin from the [SketchUcation PluginStore](https://sketchucation.com/).
+2. Download latest Visual History plugin from the [SketchUcation PluginStore](https://sketchucation.com/plugin/2281-visual_history).
 3. Install plugin following this [guide](https://help.sketchup.com/article/3000263).
 
 Now, you should have in SketchUp a "Visual History" menu in "Extensions" menu.
