@@ -1,2 +1,3 @@
-# SketchUp-Visual-History-Plugin
-Open-source Visual History extension for SketchUp 2017 or newer.
+# Free visual history plugin for SketchUp
+
+Visually control your SketchUp history with thumbnails. Export your history to an animated GIF image (on Windows).
