@@ -27,8 +27,8 @@ Documentation
 
 1. Open SketchUp.
 2. Click on "Extensions > Visual History > Center Selection Relatively to Origin".
-3. Click on "Extensions > Visual History > Clear Visual History".
-4. If needed: center selection in a better way.
+3. If needed: center selection in a better way.
+4. Click on "Extensions > Visual History > Clear Visual History".
 5. Click on "Extensions > Visual History > Rotate Selection by 360° in 32 Steps".
 6. Click on "Extensions > Visual History > Export History as GIF...".
 7. Enjoy result:
