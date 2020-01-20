@@ -40,6 +40,33 @@ module VisualHistory
 
     end
 
+    # Forces recording of current state (thanks to a null operation).
+    #
+    # @return [nil]
+    def self.force_state_recording(operation_name = '')
+
+      model = Sketchup.active_model
+
+      return if model.active_entities.first.nil?
+
+      model.start_operation(
+        operation_name,
+        true # disable_ui
+      )
+
+      model.active_entities.first.hidden = !model.active_entities.first.hidden?
+
+      model.active_entities.first.hidden = !model.active_entities.first.hidden?
+
+      # XXX This will add a state. 
+      #
+      # @see ModelObserver#onTransactionCommit
+      model.commit_operation
+
+      nil
+
+    end
+
     # Adds a state.
     #
     # @return [nil]
@@ -60,20 +87,8 @@ module VisualHistory
 
         cleanup_and_reset
 
-        Sketchup.active_model.start_operation(
-          TRANSLATE['Recycle Visual History'],
-          true # disable_ui
-        )
-
-        # XXX This “hack” will recycle visual history without bothering user:
-
-        Sketchup.active_model.active_entities.first.hidden =\
-          !Sketchup.active_model.active_entities.first.hidden?
-
-        Sketchup.active_model.active_entities.first.hidden =\
-          !Sketchup.active_model.active_entities.first.hidden?
-
-        Sketchup.active_model.commit_operation
+        # XXX This “hack” will recycle visual history without bothering user.
+        force_state_recording(TRANSLATE['Recycle Visual History'])
 
         show_html_dialog
 

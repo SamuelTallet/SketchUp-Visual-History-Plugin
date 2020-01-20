@@ -20,15 +20,18 @@
 
 "First, select a group or a component."="D'abord, sélectionnez un groupe ou un composant.";
 "Rotation... Please wait."="Rotation... Veuillez patienter.";
+"Rebound... Please wait."="Rebond... Veuillez patienter.";
 
 //
 // File: menu.rb
 //
 
 "Show Visual History"="Afficher l'historique visuel";
+"Force Current State Recording"="Forcer l'enregistrement de l'état actuel";
 "Center Selection Relatively to Origin"="Centrer la sélection par rapport à l'origine";
 "Clear Visual History"="Effacer l'historique visuel";
 "Rotate Selection by 360° in 32 Steps"="Faire pivoter la sélection de 360° en 32 étapes";
+"Make Selection Rebound in 32 Steps"="Faire rebondir la sélection en 32 étapes";
 "Export History as GIF..."="Exporter l'historique en tant que GIF...";
 
 //

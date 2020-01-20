@@ -56,6 +56,12 @@ module VisualHistory
 
       }
 
+      @menu.add_item(TRANSLATE['Force Current State Recording']) {
+
+        Viewer.force_state_recording
+
+      }
+
       @menu.add_item(TRANSLATE['Center Selection Relatively to Origin']) {
 
         Grouponents.center_selected
@@ -71,6 +77,12 @@ module VisualHistory
       @menu.add_item(TRANSLATE['Rotate Selection by 360° in 32 Steps']) {
 
         Grouponents.rotate_selected
+
+      }
+
+      @menu.add_item(TRANSLATE['Make Selection Rebound in 32 Steps']) {
+
+        Grouponents.rebound_selected
 
       }
 

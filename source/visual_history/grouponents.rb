@@ -156,6 +156,100 @@ module VisualHistory
 
     end
 
+    # Makes grouponent rebound in 32 steps.
+    #
+    # @param [Sketchup::Group, Sketchup::ComponentInstance] grouponent
+    # @raise [ArgumentError]
+    #
+    # @return [nil]
+    def self.rebound(grouponent)
+
+      raise ArgumentError.new('Grouponent parameter is invalid.')\
+        unless grouponent.is_a?(Sketchup::Group)\
+          || grouponent.is_a?(Sketchup::ComponentInstance)
+
+      Sketchup.status_text = TRANSLATE['Rebound... Please wait.']
+
+      grouponent_bounds = grouponent.bounds
+
+      grouponent_height = grouponent_bounds.max.z - grouponent_bounds.min.z
+
+      vector_step = grouponent_height.to_l.to_cm / 100
+
+      vector_speed_factor = 1
+
+      16.times do
+
+        vector_speed_factor += (vector_step / 10)
+
+        grouponent.transform!(
+
+          Geom::Transformation.translation(
+
+            Geom::Vector3d.new(0, 0, vector_step * vector_speed_factor)
+
+          )
+
+        )
+
+      end
+
+      vector_speed_factor = 1
+
+      16.times do
+
+        vector_speed_factor += (vector_step / 10)
+
+        grouponent.transform!(
+
+          Geom::Transformation.translation(
+
+            Geom::Vector3d.new(0, 0, -vector_step * vector_speed_factor)
+
+          )
+
+        )
+
+      end
+
+      Sketchup.status_text = nil
+
+      nil
+
+    end
+
+    # Makes selected grouponent rebound in 32 steps.
+    #
+    # @return [nil]
+    def self.rebound_selected
+
+      selection = Sketchup.active_model.selection
+
+      if selection.empty?
+
+        UI.messagebox(TRANSLATE['First, select a group or a component.'])
+
+        return
+
+      end
+
+      entity = selection.first
+
+      if entity.is_a?(Sketchup::Group)\
+        || entity.is_a?(Sketchup::ComponentInstance)
+
+        rebound(entity)
+
+      else
+
+        UI.messagebox(TRANSLATE['First, select a group or a component.'])
+
+      end
+
+      nil
+
+    end
+
   end
 
 end

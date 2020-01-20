@@ -26,7 +26,7 @@ require 'extensions'
 # Visual History plugin namespace.
 module VisualHistory
 
-  VERSION = '1.0.0'.freeze
+  VERSION = '1.0.1'.freeze
 
   # Load translation if it's available for current locale.
   TRANSLATE = LanguageHandler.new('vhy.strings')
