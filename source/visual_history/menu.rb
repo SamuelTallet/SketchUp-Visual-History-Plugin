@@ -86,15 +86,11 @@ module VisualHistory
 
       }
 
-      if Sketchup.platform == :platform_win
+      @menu.add_item(TRANSLATE['Export History as GIF...']) {
 
-        @menu.add_item(TRANSLATE['Export History as GIF...']) {
+        Viewer.export_to_gif
 
-          Viewer.export_to_gif
-
-        }
-
-      end
+      }
 
       nil
 

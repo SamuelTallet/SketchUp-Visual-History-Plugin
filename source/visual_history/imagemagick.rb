@@ -20,8 +20,8 @@
 raise 'The VHY plugin requires at least Ruby 2.2.0 or SketchUp 2017.'\
   unless RUBY_VERSION.to_f >= 2.2 # SketchUp 2017 includes Ruby 2.2.4.
 
-require 'fileutils'
 require 'sketchup'
+require 'fileutils'
 
 # Visual History plugin namespace.
 module VisualHistory
@@ -31,10 +31,26 @@ module VisualHistory
 
     # Returns absolute path to ImageMagick convert executable.
     #
+    # @raise [StandardError]
+    #
     # @return [String]
     def self.convert_exe
 
-      File.join(__dir__, 'ImageMagick', 'Win', 'convert.exe')
+      if Sketchup.platform == :platform_osx
+
+        return File.join(__dir__, 'ImageMagick', 'Mac', 'magick')
+
+      elsif Sketchup.platform == :platform_win
+
+        return File.join(__dir__, 'ImageMagick', 'Win', 'convert.exe')
+
+      else
+
+        raise StandardError.new(
+          'Unsupported platform: ' + Sketchup.platform.to_s
+        )
+
+      end
 
     end
 
@@ -61,10 +77,21 @@ module VisualHistory
       raise ArgumentError.new('Out Filename parameter must be a String.')\
         unless out_filename.is_a?(String)
 
-      command =\
-        '"' + convert_exe + '" -delay ' + delay.to_s + ' "' +
-        File.join(in_dir, '*.jpg') + '" "' +
-        File.join(out_dir, out_filename + '.gif') + '"'
+      if Sketchup.platform == :platform_osx
+
+        command =\
+          '"' + convert_exe + '" convert -delay ' + delay.to_s + ' "' +
+          File.join(in_dir, '*.jpg') + '" "' +
+          File.join(out_dir, out_filename + '.gif') + '"'
+
+      else
+
+        command =\
+          '"' + convert_exe + '" -delay ' + delay.to_s + ' "' +
+          File.join(in_dir, '*.jpg') + '" "' +
+          File.join(out_dir, out_filename + '.gif') + '"'
+
+      end
 
       status = system(command)
 

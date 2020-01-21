@@ -26,7 +26,7 @@ require 'extensions'
 # Visual History plugin namespace.
 module VisualHistory
 
-  VERSION = '1.0.1'.freeze
+  VERSION = '1.0.2'.freeze
 
   # Load translation if it's available for current locale.
   TRANSLATE = LanguageHandler.new('vhy.strings')
@@ -48,7 +48,7 @@ module VisualHistory
 
   features = [
     TRANSLATE['Visually control your SketchUp history with thumbnails.'],
-    TRANSLATE['Export your history to an animated GIF image (on Windows).']
+    TRANSLATE['Export your history to an animated GIF image.']
   ]
 
   extension.description = features.join(' ')
