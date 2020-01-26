@@ -31,6 +31,8 @@ module VisualHistory
 
     # When a transaction is completed:
     def onTransactionCommit(_model)
+
+      return if SESSION[:pause] == true
       
       Viewer.add_state
 
@@ -41,6 +43,8 @@ module VisualHistory
     # When user “redoes” a transaction:
     def onTransactionRedo(_model)
 
+      return if SESSION[:pause] == true
+
       Viewer.add_state
 
       Viewer.reload_html_dialog
@@ -49,6 +53,8 @@ module VisualHistory
 
     # When user “undoes” a transaction:
     def onTransactionUndo(_model)
+
+      return if SESSION[:pause] == true
 
       Viewer.remove_last_state
 

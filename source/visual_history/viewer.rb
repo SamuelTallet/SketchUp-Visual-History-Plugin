@@ -40,6 +40,25 @@ module VisualHistory
 
     end
 
+    # Pause/restart state recording.
+    #
+    # @return [nil]
+    def self.pause_state_recording
+
+      if SESSION[:pause].nil?
+
+        SESSION[:pause] = false
+
+      end
+
+      SESSION[:pause] = !SESSION[:pause]
+
+      cleanup_and_reset
+
+      nil
+
+    end
+
     # Forces recording of current state (thanks to a null operation).
     #
     # @return [nil]

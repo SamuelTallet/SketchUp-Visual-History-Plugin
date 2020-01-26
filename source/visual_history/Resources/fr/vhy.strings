@@ -27,6 +27,7 @@
 //
 
 "Show Visual History"="Afficher l'historique visuel";
+"Pause/Restart State Recording"="Mettre en pause/reprendre l'enregistrement des états";
 "Force Current State Recording"="Forcer l'enregistrement de l'état actuel";
 "Center Selection Relatively to Origin"="Centrer la sélection par rapport à l'origine";
 "Clear Visual History"="Effacer l'historique visuel";

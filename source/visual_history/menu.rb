@@ -56,6 +56,12 @@ module VisualHistory
 
       }
 
+      @menu.add_item(TRANSLATE['Pause/Restart State Recording']) {
+
+        Viewer.pause_state_recording
+
+      }
+
       @menu.add_item(TRANSLATE['Force Current State Recording']) {
 
         Viewer.force_state_recording
