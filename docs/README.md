@@ -11,17 +11,16 @@ Demos
 
 Credits: [Nyra Woman Warrior](https://sketchfab.com/3d-models/nyra-woman-warrior-01bbc93349804dcfb8bc068787b92f69) by [Arion Digital](https://sketchfab.com/andrewswihart).
 
-Installation
-------------
+Documentation
+-------------
+
+### How to install this plugin?
 
 1. Be sure to have SketchUp 2017 or newer.
 2. Download latest Visual History plugin from the [SketchUcation PluginStore](https://sketchucation.com/plugin/2281-visual_history).
-3. Install plugin following this [guide](https://help.sketchup.com/article/3000263).
+3. Install plugin following this [guide](https://www.youtube.com/watch?v=tyM5f81eRno).
 
 Now, you should have in SketchUp a "Visual History" menu in "Extensions" menu.
-
-Documentation
--------------
 
 ### How to create a turntable animation with this plugin?
 
@@ -43,4 +42,4 @@ Visual History plugin relies on [ImageMagick software](https://www.imagemagick.o
 Copyright
 ---------
 
-© 2020 Samuel Tallet
+© 2021 Samuel Tallet
