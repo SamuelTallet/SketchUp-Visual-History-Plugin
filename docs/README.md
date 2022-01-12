@@ -5,9 +5,9 @@ Visually control your SketchUp history with thumbnails. Export your history to a
 Demos
 -----
 
-![Visual History Plugin Sphere Demo](https://raw.githubusercontent.com/SamuelTS/SketchUp-Visual-History-Plugin/master/docs/sphere_demo.png)
+![Visual History Plugin Sphere Demo](https://raw.githubusercontent.com/SamuelTallet/SketchUp-Visual-History-Plugin/master/docs/sphere_demo.png)
 
-![Visual History Plugin Warrior Demo](https://raw.githubusercontent.com/SamuelTS/SketchUp-Visual-History-Plugin/master/docs/warrior_demo.gif)
+![Visual History Plugin Warrior Demo](https://raw.githubusercontent.com/SamuelTallet/SketchUp-Visual-History-Plugin/master/docs/warrior_demo.gif)
 
 Credits: [Nyra Woman Warrior](https://sketchfab.com/3d-models/nyra-woman-warrior-01bbc93349804dcfb8bc068787b92f69) by [Arion Digital](https://sketchfab.com/andrewswihart).
 
@@ -32,7 +32,7 @@ Now, you should have in SketchUp a "Visual History" menu in "Extensions" menu.
 6. Click on "Extensions > Visual History > Export History as GIF...".
 7. Enjoy result:
 
-![Visual History Plugin Warrior Demo](https://raw.githubusercontent.com/SamuelTS/SketchUp-Visual-History-Plugin/master/docs/warrior_demo.gif)
+![Visual History Plugin Warrior Demo](https://raw.githubusercontent.com/SamuelTallet/SketchUp-Visual-History-Plugin/master/docs/warrior_demo.gif)
 
 Thanks
 ------
